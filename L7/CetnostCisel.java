@@ -5,18 +5,17 @@ public class CetnostCisel {
 		int vstup;
 		int pocet = 0;
 		
+      cyklus:
 		while (sc.hasNextInt()) {
 			vstup = sc.nextInt();
 			for (int i=0; i < pocet; i++) {
 				if (vstup == cisla[i].getVelikost()) {
 					cisla[i].zvysCetnost();
-					continue;
+					continue cyklus;
 				}
 			}
-			if (vstup != cisla[pocet].getVelikost()) {
-				cisla[pocet] = new Cislo(vstup);
-				pocet++;
-			}
+			cisla[pocet] = new Cislo(vstup);
+			pocet++;
 		}
 		
 		for (int i=0; i < pocet; i++) {

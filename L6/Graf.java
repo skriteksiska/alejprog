@@ -1,4 +1,11 @@
 public class Graf {
+
+   public static void vykresli(Double velikost) {
+      for (int i=0; i < velikost; i++) {
+				System.out.printf("#");
+			}
+   }
+
 	public static void main(String[] args) {
 		int pole[] = new int[100];
 		int i = 0, max = 0;
@@ -13,11 +20,12 @@ public class Graf {
 		}
 		
 		Double meritko = max / 60.0;
-		
+		if (max < 60) {
+         meritko = 1.0;
+      }
+      
 		for (int j=0; j < i; j++) {
-			for (int z=0; z < pole[j]/meritko; z++) {
-				System.out.printf("#");
-			}
+			vykresli(pole[j] / meritko);
 			System.out.println();
 		}
 	}
