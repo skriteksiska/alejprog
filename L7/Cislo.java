@@ -14,4 +14,7 @@ public class Cislo {
 	public void zvysCetnost() {
 		this.cetnost++;
 	}
+	public void setCetnost(int a) {
+		this.cetnost = a;
+	}
 }
