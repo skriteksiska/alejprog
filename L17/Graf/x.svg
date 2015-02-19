@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+width="220" height="220" viewBox="0 0 220 220">
+<rect x="10" y="110" width="20" height="100" fill="blue" stroke="black" stroke-width="2"/>
+<rect x="40" y="35" width="20" height="175" fill="blue" stroke="black" stroke-width="2"/>
+<rect x="70" y="10" width="20" height="200" fill="blue" stroke="black" stroke-width="2"/>
+<rect x="100" y="10" width="20" height="200" fill="blue" stroke="black" stroke-width="2"/>
+<rect x="130" y="60" width="20" height="150" fill="blue" stroke="black" stroke-width="2"/>
+<rect x="160" y="135" width="20" height="75" fill="blue" stroke="black" stroke-width="2"/>
+<rect x="190" y="110" width="20" height="100" fill="blue" stroke="black" stroke-width="2"/>
+</svg>
