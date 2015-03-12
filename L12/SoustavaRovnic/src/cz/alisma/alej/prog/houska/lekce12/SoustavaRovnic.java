@@ -2,6 +2,7 @@ package cz.alisma.alej.prog.houska.lekce12;
 
 public class SoustavaRovnic {
 	
+	// pro ladeni
 	private static void vypis(int[][] matice) {
 		System.out.println();
 		for (int i=0; i < matice.length; i++) {
@@ -32,33 +33,35 @@ public class SoustavaRovnic {
 		int promennych = Integer.parseInt(args[0]);
 		int[][] matice = new int[promennych][promennych+1];
 		
-		// ochrana pred uzivatelem
-		if (args.length < 1 + promennych*(promennych+1)) {
-			System.out.println("Nezadali jste dost informaci.");
-			return;
-		}
+		java.util.Scanner vstup = new java.util.Scanner(System.in);
 		
 		// nacteni matice
 		for (int i=0; i < promennych; i++) {
 			for (int j=0; j < promennych+1; j++) {
-				matice[i][j] = Integer.parseInt(args[1+i*promennych+j]);
+				if (vstup.hasNextInt()) {
+					matice[i][j] = vstup.nextInt();
+				}
+				else {
+					System.out.println("Nezadali jste dost informaci.");
+					return;
+				}
 			}
 		}
 		
-		vypis(matice);
+		//vypis(matice);
 		
 		// uprava matice
 		for (int prvniradek=0; prvniradek < promennych-1; prvniradek++) {
 			for (int druhyradek=prvniradek+1; druhyradek < promennych; druhyradek++) {
 				odecti(matice, prvniradek, druhyradek);
 			}
-			vypis(matice);
+			//vypis(matice);
 		}
 		
 		double[] vysledky = new double[promennych];
 		double soucet;
 		
-		for (int i=promennych; i > 0; i--) {
+		for (int i=promennych-1; i >= 0; i--) {
 			soucet = 0;
 			for (int j=i+1; j < promennych; j++) {
 				soucet -= matice[i][j] * vysledky[j];
